@@ -946,7 +946,7 @@ body {
     width: 100%;
     height: 100%;
     box-shadow: 0.125vw 0.125vw 1vw rgba(81, 137, 251, .5), -0.125vw 0.125vw 1vw rgba(81, 137, 251, .5), 0.125vw -0.125vw 1vw rgba(81, 137, 251, .5), -0.125vw -0.125vw 1vw rgba(81, 137, 251, .5);
-    background-image: url('./pic/mian1.png');
+    background-image: url('./pic/mian1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -1447,17 +1447,16 @@ body {
     background-color: #383358;
 }
 .cuadro-l__front {
-    background-image: url('./pic/mian2.png');
-    background-color: #d51e24;
-    border: 1vw solid #d51e24;
+    background-image: url('./pic/mian2.jpg');
+   
+   
 }
 .cuadro-l__front::before {
     content: '';
     position: absolute;
-    top: -1vw;
-    left: -1vw;
-    width: 5vw;
-    height: 7vw;
+ 
+    width: 100%;
+    height: 100%;
     background-origin: padding-box;
     background-image: linear-gradient(to bottom, rgba(40, 125, 210, .15), rgba(40, 125, 210, .15));
 }
@@ -1465,7 +1464,7 @@ body {
     left: 20vw;
 }
 .cuadro-r__front {
-    background-image: url('./pic/mian3.png');
+    background-image: url('./pic/mian3.jpg');
     background-color: #0f1110;
     border: 0.5vw solid #0f1110;
 }
