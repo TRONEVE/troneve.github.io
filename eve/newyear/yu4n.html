@@ -21,7 +21,7 @@
             font-family: "楷体";
         }
     </style>
-    <title>元宵快乐</title>
+    <title>元宵</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -86,7 +86,6 @@
         </svg>
     </div>
 
-    <!-- App -->
     <div class="container">
         <div class="loading-init">
             <div class="loading-init__header"></div>
@@ -95,8 +94,8 @@
         <div class="stage-container remove">
             <div class="page_two hide">
                 <div id="text" style="display:none;">
-                    <p>孙老师<br><br>元宵快乐！<span id="time"></span><br><span id="text1"></span><br>
-                        我想<br>此时此刻<br>请您<br>看一场<br>烟花<br><br>Tips:嘿嘿，可以试一下点击屏幕噢！<br><br><br><span
+                    <p>白驹过隙，时光飞逝<br><br>不知不觉，这个年已经过完了<span id="time"></span><br><span id="text1"></span><br>
+                     我留了一个小礼物<br>希望<br>你会<br>喜欢<br><a href="">点击我</a><br><br><span
                             id="copyright"></span></p>
                 </div>
                 <div class="type_words" id="contents" style="font-size:1.15rem;line-height:1.5rem;"></div>
@@ -215,14 +214,14 @@
         }
 
         function start() {
-            let str = $("#text").html(); //"于我而言，你是最好且是唯一"
+            let str = $("#text").html(); 
             let str_ = ''
             let i = 0
             let content = document.getElementById('contents')
             let timer = setInterval(() => {
                 if (str_.length < str.length) {
                     str_ += str[i++]
-                    content.innerHTML = '<p>' + str_ + '<span class="xx" style="opacity: 1;    color: white;">∎</span></p>' //打印时加光标
+                    content.innerHTML = '<p>' + str_ + '<span class="xx" style="opacity: 1;    color: white;">∎</span></p>' 
                 } else {
                     clearInterval(timer)
                     content.innerHTML = '<p>' + str_ + '</p>'
@@ -241,58 +240,7 @@
         })();
     </script>
     <script>
-        function time() {
-            window.setTimeout("time()", 1000);
-            var seconds = 1000
-            var minutes = seconds * 60
-            var hours = minutes * 60
-            var days = hours * 24
-            var years = days * 365
-            var today = new Date()
-            var todayYear = today.getFullYear()
-            var newYear = todayYear + 1
-            var lastYear = todayYear - 1
-            var todayMonth = today.getMonth() + 1
-            var todayDate = today.getDate()
-            var todayHour = today.getHours()
-            var todayMinute = today.getMinutes()
-            var todaySecond = today.getSeconds()
-
-
-            var t1 = Date.UTC(newYear, 1, 22, 0, 00, 00)
-            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
-
-            var diff = t1 - t2
-            var diff2 = t2 - t1
-
-            var diffYears = Math.floor(diff / years)
-            var diffDays = Math.floor((diff / days) - diffYears * 365)
-            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
-            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
-            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
-                minutes) / seconds)
-
-            var diff2Years = Math.floor(diff2 / years)
-            var diff2Days = Math.floor((diff2 / days) - diff2Years * 365)
-            var diff2Hours = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days) / hours)
-            var diff2Minutes = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours) / minutes)
-            var diff2Seconds = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours - diff2Minutes *
-                minutes) / seconds)
-
-                /*
-            if (todayMonth == 1) 
-            { 
-               // if (todayDate == 22) 
-                //{ document.getElementById("text1").innerHTML = "吼吼 兔年啦，祝你" + "大展宏图，身体健康，学习顺利" + "平安喜乐，快乐每天，不止新年！" } 
-            }
-            else 
-            { 
-                document.getElementById("text1").innerHTML = "提前祝你" + newYear + "新年快乐" 
-            }
-*/
-            //document.getElementById("time").innerHTML = diffDays + "天" + diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒" + "就是兔年啦"
-        }
-
+      
         time()
     </script>
     倒计时
